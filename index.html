@@ -37,19 +37,34 @@
                 aspect-ratio: 4/3;
             }
         }
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: #4F46E5;
+        }
     </style>
 </head>
 <body class="min-h-screen">
-    <header class="bg-white shadow-sm">
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-bold text-gray-900">Astro Prospector</h1>
-                <a href="https://html-classic.itch.zone/html/13142449/index.html" class="text-blue-600 hover:text-blue-800" target="_blank">Play on itch.io</a>
+                <h1 class="text-2xl font-bold text-gray-900">AstroProspector Game Online</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#gameplay" class="nav-link text-gray-600 hover:text-gray-900">Gameplay</a>
+                    <a href="#advantages" class="nav-link text-gray-600 hover:text-gray-900">Advantages</a>
+                    <a href="#features" class="nav-link text-gray-600 hover:text-gray-900">Features</a>
+                    <a href="#faq" class="nav-link text-gray-600 hover:text-gray-900">FAQ</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-16">
         <section class="text-center mb-12">
             <h2 class="text-4xl font-bold text-gray-900 mb-4">Space Mining Adventure</h2>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -66,6 +81,13 @@
                     allowfullscreen>
                 </iframe>
             </div>
+        </section>
+
+        <section id="gameplay" class="bg-white p-6 rounded-lg shadow-sm mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">About Astro Prospector</h2>
+            <p class="text-gray-600">
+                Astro Prospector is an engaging space mining adventure that combines resource management with exciting gameplay. As a space prospector, you'll explore various celestial bodies, mine valuable resources, and upgrade your spacecraft to become the ultimate space explorer. The game features intuitive controls, progressive difficulty, and a rewarding upgrade system that keeps you engaged as you journey through the cosmos.
+            </p>
         </section>
 
         <section class="grid md:grid-cols-2 gap-8 mb-12">
@@ -91,18 +113,101 @@
             </div>
         </section>
 
-        <section class="bg-white p-6 rounded-lg shadow-sm">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">About Astro Prospector</h2>
-            <p class="text-gray-600">
-                Astro Prospector is an engaging space mining adventure that combines resource management with exciting gameplay. As a space prospector, you'll explore various celestial bodies, mine valuable resources, and upgrade your spacecraft to become the ultimate space explorer. The game features intuitive controls, progressive difficulty, and a rewarding upgrade system that keeps you engaged as you journey through the cosmos.
-            </p>
+        <section id="advantages" class="bg-white p-6 rounded-lg shadow-sm mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Game Advantages</h2>
+            <ul class="space-y-3 text-gray-600">
+                <li>• High Freedom: Players can decide mining direction, construction strategy, and investment pace</li>
+                <li>• Strong Realism: Mining and life support systems closely match real space environments</li>
+                <li>• Sense of Growth: Progress from a small-scale miner to a space industry tycoon</li>
+                <li>• Rich Tech Tree: Research various automation, resource extraction, and terrain scanning technologies</li>
+                <li>• Easy to Start: Simple controls, perfect for quick gameplay</li>
+                <li>• Creative Fusion: Cleverly combines shooting and resource management for a novel gaming experience</li>
+                <li>• Browser-Based: Play directly through your browser, no installation needed</li>
+            </ul>
         </section>
+
+        <section id="features" class="bg-white p-6 rounded-lg shadow-sm mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Core Features</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Resource Collection</h3>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li>• Operate mining equipment to extract metals and rare minerals from various planets and asteroid belts</li>
+                        <li>• Each resource has unique value affecting tech upgrades and economic development</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Base Construction</h3>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li>• Build outposts, processing facilities, and power stations</li>
+                        <li>• Manage energy, oxygen supply, and equipment maintenance</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Exploration & Expansion</h3>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li>• Pilot spacecraft to new areas for mining prospects</li>
+                        <li>• Each region has unique gravity, radiation, and environmental challenges</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Economic System</h3>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li>• Sell collected resources for funding</li>
+                        <li>• Invest in advanced mining equipment or larger colony construction</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-sm mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">How It Works</h2>
+            <div class="text-gray-600 space-y-4">
+                <p>AstroProspector combines resource management with space exploration in an engaging gameplay loop:</p>
+                <ol class="list-decimal pl-6 space-y-3">
+                    <li>Start with basic mining equipment and explore nearby asteroids</li>
+                    <li>Extract resources while managing oxygen and equipment condition</li>
+                    <li>Sell resources to upgrade equipment and expand operations</li>
+                    <li>Build and maintain bases to process resources more efficiently</li>
+                    <li>Research new technologies to access more valuable resources</li>
+                    <li>Expand your mining empire across different space sectors</li>
+                </ol>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Risk Factors</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Manage risks like oxygen depletion, equipment damage, geological hazards, and hostile alien encounters</li>
+                        <li>• Players must constantly manage risks and improve survival capabilities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="bg-white p-6 rounded-lg shadow-sm mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">What are the system requirements?</h3>
+                    <p class="text-gray-600">AstroProspector runs in any modern web browser with JavaScript enabled. No additional software installation is required.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Is there a tutorial for beginners?</h3>
+                    <p class="text-gray-600">Yes, the game includes an interactive tutorial that teaches you the basics of mining, resource management, and base construction.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Can I save my progress?</h3>
+                    <p class="text-gray-600">Your progress is automatically saved in your browser. You can continue where you left off when you return to the game.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">How do I handle environmental hazards?</h3>
+                    <p class="text-gray-600">Monitor your oxygen levels, maintain your equipment, and upgrade your protective systems to handle various space hazards like radiation and extreme temperatures.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-white border-t mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <p class="text-center text-gray-500">
-                © 2024 Astro Prospector. All rights reserved.
+                2024 Astro Prospector. All rights reserved.
             </p>
         </div>
     </footer>
